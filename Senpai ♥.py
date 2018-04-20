@@ -33,9 +33,11 @@ f = Font(black, 25,green, "Brush Script M7")
 theme= Sound("theme.ogg", 1)
 hit= Sound("hit.ogg", 2)
 
+
 bk.draw()
 logo.draw()
-game.drawText("Press [SPACE] To Start", 235, 280)
+logo2.draw()
+game.drawText("Press [SPACE] To Start", 235,450)
 game.update()
 game.wait(K_SPACE)
 

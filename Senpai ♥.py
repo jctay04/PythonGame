@@ -42,6 +42,7 @@ while not game.over:
     senpai.move(True)
     monster.move(True)
     
+    
     theme.play()
 
     knife.moveTo(mouse.x, mouse.y)
@@ -62,9 +63,11 @@ while not game.over:
         senpai.health -=2
         #game.time -=30
         hit.play()
+    if game.score>=1000:
+        game.over = True
 
     if senpai.collidedWith(mouse) and mouse.LeftButton:
-        #game.time -=30
+        game.time -=100
         x = randint(senpai.width, game.width-senpai.width)
         y = randint(senpai.height, game.height-senpai.height)
         senpai.moveTo(x,y)
@@ -87,6 +90,4 @@ game.update(30)
 game.wait(K_RETURN)
 
 game.quit() #makes you quit the game
-
-
 

@@ -40,6 +40,9 @@ logo2.draw()
 game.drawText("Press [SPACE] To Start", 235,450)
 game.update()
 game.wait(K_SPACE)
+if game.time >=0:
+	game.time +=50
+
 
 while not game.over:
     game.processInput()
@@ -59,7 +62,7 @@ while not game.over:
         x = randint(senpai.width, game.width-senpai.width)
         y = randint(senpai.height, game.height-senpai.height)
         monster.moveTo(x,y)
-        game.score +=50
+        game.score +=15
         game.time +=70
         monster.speed -=2
 
